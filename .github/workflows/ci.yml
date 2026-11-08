@@ -19,5 +19,5 @@ jobs:
     - name: Grant execute permision for gradlew
       run: chmod +x gradlew
     - name: Build and test
-      working-directory: ./
+      working-directory: .
       run: ./gradlew deployReports
