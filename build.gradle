@@ -57,6 +57,7 @@ gitPublish {
     branch ='gh-pages'
     contents {
         from 'build/reports/'
+        into 'reports'
     }
 }
 
