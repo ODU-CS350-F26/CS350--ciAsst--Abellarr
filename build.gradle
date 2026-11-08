@@ -53,7 +53,7 @@ build.dependsOn javadoc
 /////////// Publication of website to GitHub /////////////
 gitPublishCopy.dependsOn reports
 gitPublish {
-    repoUri = 'git@github.com:ODU-CS350-F26/CS350--lab4-documentation--Abellarr.git'
+    repoUri = 'git@github.com:ODU-CS350-F26/CS350--ciAsst--Abellarr.git'
     branch ='gh-pages'
     contents {
         from 'build/reports'
