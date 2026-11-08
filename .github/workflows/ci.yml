@@ -20,4 +20,6 @@ jobs:
       run: chmod +x gradlew
     - name: Build and test
       working-directory: .
-      run: gradlew deployReports
+      run: |
+        ./gradlew build
+        ./gradlew deployReports
