@@ -20,6 +20,11 @@ jobs:
       run: chmod +x gradlew
     - name: Build and test
       working-directory: .
+      run: ./gradlew build
+    - name: Deploy reports
       run: |
-        ./gradlew build
+        eval $(ssh-agent -s -t 600)
+        ssh-add <(echo "${{ secrets.DEPLOY_KEY }}")
+        git config --global user.email "dorti015@odu.edu"
+        git config --global user.name "Project Actions"
         ./gradlew deployReports
